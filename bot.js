@@ -22,6 +22,7 @@ bot.on('message',msg=>{
             if(!args[1]) return msg.channel.send('**ERROR, DEFINE ARGS!**');
             msg.channel.bulkDelete(args[1]);
             console.log('purged ' + args[1] + ' messages');
+            msg.channel.send(`**Deleted ${args[1]} messages**`)
             break;
         case 'kick':
             if(!msg.member.hasPermission('KICK_MEMBERS')) return msg.channel.send('**Insufficient Permissions**');
