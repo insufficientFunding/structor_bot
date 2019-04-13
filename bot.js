@@ -20,7 +20,7 @@ bot.on('message',msg=>{
             break;
         case 'purge':
             if(!args[1]) return msg.channel.send('**ERROR, DEFINE ARGS!**');
-            msg.channel.bulkDelete(args[1] + 1);
+            msg.channel.bulkDelete(args[1]);
             console.log('purged ' + args[1] + ' messages');
             break;
         case 'kick':
